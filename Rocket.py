@@ -6,7 +6,7 @@ from config import dt
 class Rocket:
     width = 10
     height = 20 
-    # Müssen die noch irgendwie durch den Menschen oder den AI kontrollierbar machen 
+    # Müssen die noch irgendwe durch den Menschen oder den AI kontrollierbar machen 
 
     def __init__(self):
         self.x = 0
@@ -33,9 +33,9 @@ class Rocket:
         if keys[pygame.K_RIGHT]:
             self.x_vel += 0.1*dt
 
-        print(self.y, self.y_vel)
 
     def draw(self, win): 
         x, y = cfg.translate_coords(self.x, self.y)
         self.rect = (int(x - self.width/2), y - self.height, self.width, self.height)
         pygame.draw.rect(win, (255, 0, 0), self.rect)
+        
